@@ -6,7 +6,7 @@
 Si intentamos leer una propiedad que no existe previamente nos dará un error.
 A partir de cuando la escribamos se guardará en el objeto instanciado, no en la clase o en todos los objetos de las clases.
 
-[link text](actividadCuatro.php)
+[Actividad 4](actividadCuatro.php)
 
 5.
 ¿se activan las funciones del padre?
@@ -27,8 +27,8 @@ $propiedadPadre = parent::__get($nombrePropiedad)
 ```
 De esta manera guardaremos la propiedad invisible que tiene el padre en una variable de la clase hija.
 
-[link text](actividadCinco.php)
+[Actividad 5](actividadCinco.php)
 
 6.
 
-[link text](actividadSeis.php)
+[Actividad 6](actividadSeis.php)
