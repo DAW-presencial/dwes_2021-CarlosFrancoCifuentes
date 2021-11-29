@@ -1,29 +1,21 @@
 <?php
 class Padre {
-    public function unMetodo () { 
-        echo "Función unMetodo de Padre \n";
+    public $valoresPadre = array("padre1" => "padre2","padre3" => "padre4",
+    );
+    public function __get($clave) {
+        return $this->valoresPadre[$clave];
     }
-    public function __get ($nombre) { 
-        echo "Función unMetodo de Padre".$nombre."\n";
-    }
-    public function __set ($nombre, $valor) { 
-        echo "Función unMetodo de Padre".$nombre.$valor."\n";
+    public function __set( $clave, $valor ){
+        $this->values[$clave] = $valor;
     }
 }
 class Hija extends Padre {
-    public function unMetodo() {
-    parent::unMetodo();
-    parent::__get("Carlos");
-    parent::__set("Carlos", 10);
-    }
+    
 }
-/* class Hija extends Padre {
-    public function unMetodo() {
-    parent::unMetodo();
-    __get("Carlos");
-    __set("Carlos", 10);
-    }
-} */
-$h= new Hija();
-$h->unMetodo();
+
+
+$padre = new Padre();
+echo($padre->__get("padre1"). "<br>");
+$hija= new Hija();
+echo($hija->__get("padre3"));
 ?>
